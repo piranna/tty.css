@@ -1,0 +1,33 @@
+{
+  "name": "tty.css",
+  "version": "0.0.0",
+  "description": "Pure CSS simulation of text-mode web browsers",
+  "main": "index.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piranna/tty.css.git"
+  },
+  "keywords": [
+    "lynx",
+    "elinks",
+    "links",
+    "links2",
+    "text-mode",
+    "browser",
+    "web",
+    "simulation",
+    "emulation",
+    "stylesheet",
+    "terminal",
+    "tui"
+  ],
+  "author": "Jesús Leganés-Combarro 'piranna' <piranna@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piranna/tty.css/issues"
+  },
+  "homepage": "https://github.com/piranna/tty.css#readme"
+}

@@ -1,0 +1,83 @@
+/* Simulate terminal font */
+
+* {
+  font-family: monospace !important;
+  font-size: 16px !important;
+}
+
+
+/* Dark color scheme (terminals default) */
+
+body {
+  color: white;
+  background-color: black;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: black;
+    background-color: white;
+  }
+}
+
+
+/* Headers */
+
+h1::before {
+	content: '# ';
+}
+
+h2::before {
+	content: '## ';
+}
+
+h3::before {
+	content: '### ';
+}
+
+h4::before {
+	content: '#### ';
+}
+
+h5::before {
+	content: '##### ';
+}
+
+h6::before {
+	content: '###### ';
+}
+
+
+/* Lists */
+
+ol {
+  list-style: decimal !important;
+}
+
+ul {
+  list-style: '- ' !important;
+}
+
+
+/* Scrollbars */
+
+/* width */
+::-webkit-scrollbar {
+  width: 1ch;
+}
+
+/* Handle */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+}
+
+
+/* TODO emulate deprecated scroll-snap-points-y */
