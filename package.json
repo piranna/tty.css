@@ -4,7 +4,7 @@
   "description": "Pure CSS simulation of text-mode web browsers",
   "main": "index.css",
   "scripts": {
-    "prepare": "sass index.scss index.css"
+    "prepare": "sass src/index.scss index.css"
   },
   "repository": {
     "type": "git",
