@@ -1,23 +1,12 @@
+@import "dark.scss";
+@import "light.scss";
+
+
 /* Simulate terminal font */
 
-* {
+:root {
   font-family: monospace !important;
   font-size: 16px !important;
-}
-
-
-/* Dark color scheme (terminals default) */
-
-body {
-  color: white;
-  background-color: black;
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    color: black;
-    background-color: white;
-  }
 }
 
 
@@ -65,19 +54,3 @@ ul {
 ::-webkit-scrollbar {
   width: 1ch;
 }
-
-/* Handle */
-@media (prefers-color-scheme: dark) {
-  ::-webkit-scrollbar-thumb {
-    background: white;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  ::-webkit-scrollbar-thumb {
-    background: black;
-  }
-}
-
-
-/* TODO emulate deprecated scroll-snap-points-y */

@@ -1,0 +1,23 @@
+/* Light color scheme */
+
+@mixin light-theme {
+  :root {
+    color: black;
+    background-color: white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+}
+
+
+@media (prefers-color-scheme: light) {
+  html:not([data-prefers-color-scheme]) {
+    @include light-theme;
+  }
+}
+
+html[data-prefers-color-scheme='light'] {
+  @include light-theme;
+}

@@ -1,0 +1,32 @@
+/* Dark color scheme */
+
+@mixin dark-theme {
+  :root {
+    color: white;
+    background-color: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  @include dark-theme;
+}
+
+html[data-prefers-color-scheme='dark'] {
+  @include dark-theme;
+}
+
+
+/* Terminals configuration used dark theme by default */
+
+@media (prefers-color-scheme: no-preference) {
+  @include dark-theme;
+}
+
+html[data-prefers-color-scheme='no-preference'] {
+  @include dark-theme;
+}
