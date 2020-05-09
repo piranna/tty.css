@@ -4,7 +4,7 @@
   "description": "Pure CSS simulation of text-mode web browsers",
   "main": "index.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "sass index.scss index.css"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/piranna/tty.css/issues"
   },
-  "homepage": "https://github.com/piranna/tty.css#readme"
+  "homepage": "https://github.com/piranna/tty.css#readme",
+  "dependencies": {
+    "sass": "^1.26.5"
+  }
 }
