@@ -1,6 +1,6 @@
 {
   "name": "tty.css",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Pure CSS simulation of text-mode web browsers",
   "main": "index.css",
   "scripts": {
