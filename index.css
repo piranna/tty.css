@@ -115,6 +115,11 @@ html * {
   margin: 0px;
 }
 
+h1, h2, h3, h4, h5, h6, ol, p, ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
 /* Headers */
 h1::before {
   content: "# ";
