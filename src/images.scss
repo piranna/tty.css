@@ -1,0 +1,38 @@
+/* Show `alt` text instead of images, and `aria-label` text instead of svg. Not
+ * working since browsers don't fully implement it
+ */
+
+/* img {
+	content: attr(alt);
+}
+
+svg {
+	content: attr(aria-label);
+} */
+
+
+// Hide the image and show alt text. Not working
+
+/* img, svg {
+	display: none;
+}
+
+img::after {
+	content: attr(alt);
+}
+
+svg::after {
+	content: attr(aria-label);
+} */
+
+
+/* Pixelate image. Not fully working
+ * https://codepen.io/tigt/pen/akYqAg, https://codepen.io/AmeliaBR/pen/QEmBko */
+img, svg {
+  filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E"+
+    "%3Cfilter id='b' x='0' y='0'%3E%3CfeFlood height='2' width='2'/%3E"+
+    "%3CfeComposite width='8' height='8'/%3E%3CfeTile result='a'/%3E"+
+    "%3CfeComposite in='SourceGraphic' in2='a' operator='in'/%3E"+
+    "%3CfeMorphology operator='dilate' radius='4'/%3E%3C/filter%3E"+
+    "%3C/svg%3E#b");
+}
