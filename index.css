@@ -1,0 +1,158 @@
+/* Dark color scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: white;
+    background-color: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
+}
+html[data-prefers-color-scheme=dark] :root {
+  color: white;
+  background-color: black;
+}
+html[data-prefers-color-scheme=dark] ::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+/* Terminals configuration used dark theme by default */
+@media (prefers-color-scheme: no-preference) {
+  :root {
+    color: white;
+    background-color: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
+}
+html[data-prefers-color-scheme=no-preference] :root {
+  color: white;
+  background-color: black;
+}
+html[data-prefers-color-scheme=no-preference] ::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+/* Light color scheme */
+@media (prefers-color-scheme: light) {
+  html:not([data-prefers-color-scheme]) :root {
+    color: black;
+    background-color: white;
+  }
+  html:not([data-prefers-color-scheme]) ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+}
+html[data-prefers-color-scheme=light] :root {
+  color: black;
+  background-color: white;
+}
+html[data-prefers-color-scheme=light] ::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+button, input {
+  padding: 0px;
+  background-color: inherit;
+  border: none;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+button::before {
+  box-sizing: border-box;
+  content: "[";
+}
+
+button::after {
+  box-sizing: border-box;
+  content: "]";
+}
+
+input {
+  border-bottom: 1px inset;
+}
+
+/* Show `alt` text instead of images, and `aria-label` text instead of svg. Not
+ * working since browsers don't fully implement it
+ */
+/* img {
+	content: attr(alt);
+}
+
+svg {
+	content: attr(aria-label);
+} */
+/* img, svg {
+	display: none;
+}
+
+img::after {
+	content: attr(alt);
+}
+
+svg::after {
+	content: attr(aria-label);
+} */
+/* Pixelate image. Not fully working
+ * https://codepen.io/tigt/pen/akYqAg, https://codepen.io/AmeliaBR/pen/QEmBko */
+img, svg {
+  filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='b' x='0' y='0'%3E%3CfeFlood height='2' width='2'/%3E%3CfeComposite width='8' height='8'/%3E%3CfeTile result='a'/%3E%3CfeComposite in='SourceGraphic' in2='a' operator='in'/%3E%3CfeMorphology operator='dilate' radius='4'/%3E%3C/filter%3E%3C/svg%3E#b");
+}
+
+/* Simulate terminal grid */
+html * {
+  font-family: UnifontMedium, ui-monospace, monospace !important;
+  font-kerning: none !important;
+  font-size: 16px !important;
+  /* font-style: normal !important;
+  font-weight: normal !important; */
+  letter-spacing: 0px !important;
+  line-height: 1 !important;
+  margin: 0px;
+}
+
+/* Headers */
+h1::before {
+  content: "# ";
+}
+
+h2::before {
+  content: "## ";
+}
+
+h3::before {
+  content: "### ";
+}
+
+h4::before {
+  content: "#### ";
+}
+
+h5::before {
+  content: "##### ";
+}
+
+h6::before {
+  content: "###### ";
+}
+
+/* Lists */
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: "- ";
+}
+
+/* Scrollbars */
+/* width */
+::-webkit-scrollbar {
+  width: 1ch;
+}
+
+/*# sourceMappingURL=index.css.map */
