@@ -1,0 +1,21 @@
+button, input {
+  padding: 0px;
+  background-color: inherit;
+  border: none;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+button::before {
+  box-sizing: border-box;
+  content: '['
+}
+
+button::after {
+  box-sizing: border-box;
+  content: ']'
+}
+
+input {
+  border-bottom: 1px inset;
+}
