@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <filter id="8colors">
+    <feComponentTransfer>
+      <feFuncR type="discrete" tableValues="0.0 1.0"/>
+      <feFuncG type="discrete" tableValues="0.0 1.0"/>
+      <feFuncB type="discrete" tableValues="0.0 1.0"/>
+    </feComponentTransfer>
+  </filter>
+</svg>

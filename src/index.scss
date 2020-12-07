@@ -12,6 +12,10 @@
 
 /* Simulate terminal grid */
 
+html {
+  filter: url("filters.svg#8colors");
+}
+
 html * {
   font-family: UnifontMedium, ui-monospace, monospace !important;
   font-kerning: none !important;
