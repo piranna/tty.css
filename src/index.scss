@@ -1,17 +1,16 @@
-// Themes
-
-@import "dark.scss";
-@import "light.scss";
-
-
 // Imports
 
 @import "forms.scss";
 @import "images.scss";
 
 
-/* Simulate terminal grid */
+// Themes
 
+@import "dark.scss";
+@import "light.scss";
+
+
+/* Simulate terminal grid */
 
 html * {
   font-family: UnifontMedium, ui-monospace, monospace !important;
