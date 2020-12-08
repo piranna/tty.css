@@ -16,21 +16,15 @@
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* Terminals configuration used dark theme by default, so we use it if there's
+ * no preference
+ */
+
+@media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
   @include dark-theme;
 }
 
-html[data-prefers-color-scheme='dark'] {
-  @include dark-theme;
-}
-
-
-/* Terminals configuration used dark theme by default */
-
-@media (prefers-color-scheme: no-preference) {
-  @include dark-theme;
-}
-
+html[data-prefers-color-scheme='dark'],
 html[data-prefers-color-scheme='no-preference'] {
   @include dark-theme;
 }

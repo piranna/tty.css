@@ -17,9 +17,7 @@
 
 
 @media (prefers-color-scheme: light) {
-  html:not([data-prefers-color-scheme]) {
-    @include light-theme;
-  }
+  @include light-theme;
 }
 
 html[data-prefers-color-scheme='light'] {

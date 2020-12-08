@@ -1,59 +1,3 @@
-/* Dark color scheme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: white;
-    background-color: black;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: white;
-  }
-}
-html[data-prefers-color-scheme=dark] :root {
-  color: white;
-  background-color: black;
-}
-html[data-prefers-color-scheme=dark] ::-webkit-scrollbar-thumb {
-  background: white;
-}
-
-/* Terminals configuration used dark theme by default */
-@media (prefers-color-scheme: no-preference) {
-  :root {
-    color: white;
-    background-color: black;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: white;
-  }
-}
-html[data-prefers-color-scheme=no-preference] :root {
-  color: white;
-  background-color: black;
-}
-html[data-prefers-color-scheme=no-preference] ::-webkit-scrollbar-thumb {
-  background: white;
-}
-
-/* Light color scheme */
-@media (prefers-color-scheme: light) {
-  html:not([data-prefers-color-scheme]) :root {
-    color: black;
-    background-color: white;
-  }
-  html:not([data-prefers-color-scheme]) ::-webkit-scrollbar-thumb {
-    background: black;
-  }
-}
-html[data-prefers-color-scheme=light] :root {
-  color: black;
-  background-color: white;
-}
-html[data-prefers-color-scheme=light] ::-webkit-scrollbar-thumb {
-  background: black;
-}
-
 button, input {
   padding: 0px;
   background-color: inherit;
@@ -103,12 +47,66 @@ img, svg {
   filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='b' x='0' y='0'%3E%3CfeFlood height='2' width='2'/%3E%3CfeComposite width='8' height='8'/%3E%3CfeTile result='a'/%3E%3CfeComposite in='SourceGraphic' in2='a' operator='in'/%3E%3CfeMorphology operator='dilate' radius='4'/%3E%3C/filter%3E%3C/svg%3E#b");
 }
 
-/* Simulate terminal grid */
-html {
-  filter: url("filters.svg#8colors");
+/* Dark color scheme */
+/* Terminals configuration used dark theme by default, so we use it if there's
+ * no preference
+ */
+@media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
+  :root {
+    color: white;
+    background-color: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
+
+  input {
+    border-bottom-color: white;
+  }
+}
+html[data-prefers-color-scheme=dark] :root,
+html[data-prefers-color-scheme=no-preference] :root {
+  color: white;
+  background-color: black;
+}
+html[data-prefers-color-scheme=dark] ::-webkit-scrollbar-thumb,
+html[data-prefers-color-scheme=no-preference] ::-webkit-scrollbar-thumb {
+  background: white;
+}
+html[data-prefers-color-scheme=dark] input,
+html[data-prefers-color-scheme=no-preference] input {
+  border-bottom-color: white;
 }
 
-html * {
+/* Light color scheme */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: black;
+    background-color: white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+
+  input {
+    border-bottom-color: black;
+  }
+}
+html[data-prefers-color-scheme=light] :root {
+  color: black;
+  background-color: white;
+}
+html[data-prefers-color-scheme=light] ::-webkit-scrollbar-thumb {
+  background: black;
+}
+html[data-prefers-color-scheme=light] input {
+  border-bottom-color: black;
+}
+
+/* Simulate terminal grid */
+* {
   font-family: UnifontMedium, ui-monospace, monospace !important;
   font-kerning: none !important;
   font-size: 16px !important;
@@ -117,6 +115,10 @@ html * {
   letter-spacing: 0px !important;
   line-height: 1 !important;
   margin: 0px;
+}
+
+html {
+  filter: url("svg/colors/vga.svg#8 colors");
 }
 
 h1, h2, h3, h4, h5, h6, ol, p, ul {
