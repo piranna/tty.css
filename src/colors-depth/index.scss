@@ -1,0 +1,13 @@
+/**
+ * 3 bits colors depth (default)
+ */
+
+
+@import "_mixins";
+
+
+// 3-bits color depth
+
+:root {
+  @include rgb-3bits;
+}

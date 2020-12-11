@@ -1,0 +1,24 @@
+/**
+ * Media enabled color scheme. Default: user agent settings
+ */
+
+
+/* Terminals configuration used dark theme by default, so we use it if there's
+ * no preference
+ */
+@media (prefers-color-scheme: dark),
+(prefers-color-scheme: no-preference) {
+ @import "_dark";
+
+ :root {
+   @include dark-root;
+ }
+}
+
+@media (prefers-color-scheme: light) {
+ @import "_light";
+
+ :root {
+   @include light-root;
+ }
+}

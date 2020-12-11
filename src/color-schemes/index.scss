@@ -1,0 +1,10 @@
+/**
+ * Dark color scheme (default)
+ */
+
+
+:root {
+  @import "_dark";
+
+  @include dark-root;
+}

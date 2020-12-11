@@ -1,0 +1,26 @@
+/**
+ * Selectable colors depth. Default: user agent colors (True Color)
+ */
+
+
+@import "_mixins";
+
+
+//
+// Monochrome
+//
+
+:root[data-color='0'],
+:root[data-min-color='0'] {
+  @include binary;
+}
+
+
+//
+// RGB
+//
+
+:root[data-color='1'],
+:root[data-min-color='1'] {
+  @include rgb-3bits;
+}

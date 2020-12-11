@@ -1,0 +1,17 @@
+/**
+ * Selectable color scheme. Default: user agent colors (system settings)
+ */
+
+
+:root[data-prefers-color-scheme=dark],
+:root[data-prefers-color-scheme=no-preference] {
+  @import "_dark";
+
+  @include dark-root;
+}
+
+:root[data-prefers-color-scheme=light] {
+  @import "_light";
+
+  @include light-root;
+}

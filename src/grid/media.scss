@@ -1,0 +1,8 @@
+/**
+ * Media enabled text grid layout. Default: user agent settings
+ */
+
+
+@media tty, (grid: 1) {
+  @import ".";
+}

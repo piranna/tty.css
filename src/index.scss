@@ -1,26 +1,8 @@
-// TTY grid
-
-:root[data-grid='1'] {
-  @import "grid/index.scss";
-}
+/**
+ * Dark text grid with ANSI terminal "ECMA-48" colors (default)
+ */
 
 
-// Color schemes
-
-:root[data-prefers-color-scheme=dark],
-:root[data-prefers-color-scheme=no-preference] {
-  @import "color-schemes/dark.scss";
-
-  @include dark-root;
-}
-
-:root[data-prefers-color-scheme=light] {
-  @import "color-schemes/light.scss";
-
-  @include light-root;
-}
-
-
-// Colors depth
-
-@import "colors.scss";
+@import "grid";
+@import "color-schemes";
+@import "colors-depth/_mixins";

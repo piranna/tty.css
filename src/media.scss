@@ -1,28 +1,24 @@
-@import 'color-schemes/mixins';
-
-@import "index.scss";
+/**
+ * Media enabled color scheme, colors depth, and text grid layout.
+ *
+ * Default: user agent settings
+ */
 
 
 // TTY grid
 
-@media tty, (grid: 1) {
-  @import "grid/index.scss";
-}
+@import "grid/media";
 
 
 // Color schemes
 
+@import "color-schemes/media";
+@import "color-schemes/_mixins";
+
 /* Terminals configuration used dark theme by default, so we use it if there's
  * no preference
  */
- @media (prefers-color-scheme: dark),
- (prefers-color-scheme: no-preference) {
-  @import "color-schemes/dark.scss";
-
-  :root {
-    @include dark-root;
-  }
-
+@media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
   :root[data-grid='1'] input {
     @include dark-input;
   }
@@ -33,12 +29,6 @@
 }
 
 @media (prefers-color-scheme: light) {
-  @import "color-schemes/light.scss";
-
-  :root {
-    @include light-root;
-  }
-
   :root[data-grid='1'] input {
     @include light-input;
   }
@@ -51,10 +41,4 @@
 
 // Colors depth
 
-// @media (color: 0), (min-color: 0) {
-//   @include binary;
-// }
-
-// @media (color: 1), (min-color: 1) {
-//   @include rgb-3bits;
-// }
+@import "colors-depth/media";

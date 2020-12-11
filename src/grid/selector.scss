@@ -1,0 +1,8 @@
+/**
+ * Selectable text grid elements. Default: user agent elements
+ */
+
+
+:root[data-grid='1'] {
+  @import ".";
+}
