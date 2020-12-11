@@ -3,13 +3,6 @@
   <filter id="1 bit">
   </filter>
 
-  <filter id="8 colors">
-    <feComponentTransfer>
-      <feFuncR type="discrete" tableValues="0.0 1.0"/>
-      <feFuncG type="discrete" tableValues="0.0 1.0"/>
-      <feFuncB type="discrete" tableValues="0.0 1.0"/>
-    </feComponentTransfer>
-  </filter>
 
   <filter id="16 colors">
   </filter>

@@ -1,0 +1,12 @@
+@import '_mixins.scss';
+
+
+/* Dark color scheme */
+
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+input {
+  @include dark-input;
+}

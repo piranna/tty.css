@@ -4,7 +4,10 @@
   "description": "Pure CSS simulation of text-mode web browsers",
   "main": "index.css",
   "scripts": {
-    "prepare": "sass src/index.scss index.css"
+    "build": "sass src/index.scss:index.css src/media.scss:media.css",
+    "prepare": "npm run build",
+    "prestart": "npm run build",
+    "start": "serve"
   },
   "repository": {
     "type": "git",
@@ -31,6 +34,9 @@
   },
   "homepage": "https://github.com/piranna/tty.css#readme",
   "dependencies": {
-    "sass": "^1.26.5"
+    "sass": "^1.30.0"
+  },
+  "devDependencies": {
+    "serve": "^11.3.2"
   }
 }

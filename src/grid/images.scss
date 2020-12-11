@@ -3,26 +3,26 @@
  */
 
 /* img {
-	content: attr(alt);
+  content: attr(alt);
 }
 
 svg {
-	content: attr(aria-label);
+  content: attr(aria-label);
 } */
 
 
 // Hide the image and show alt text. Not working
 
 /* img, svg {
-	display: none;
+  display: none;
 }
 
 img::after {
-	content: attr(alt);
+  content: attr(alt);
 }
 
 svg::after {
-	content: attr(aria-label);
+  content: attr(aria-label);
 } */
 
 

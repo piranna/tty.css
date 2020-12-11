@@ -1,0 +1,22 @@
+/* Dark color scheme */
+
+@mixin dark-root {
+  color: white;
+  background-color: black;
+}
+
+@mixin dark-input {
+  border-bottom-color: white;
+}
+
+
+/* Light color scheme */
+
+@mixin light-root {
+  color: black;
+  background-color: white;
+}
+
+@mixin light-input {
+  border-bottom-color: black;
+}

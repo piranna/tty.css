@@ -1,0 +1,30 @@
+@import "elements.scss";
+@import "forms.scss";
+@import "images.scss";
+
+
+/* Simulate terminal grid */
+
+* {
+  font-family: UnifontMedium, ui-monospace, monospace !important;
+  font-kerning: none !important;
+  font-size: 16px !important;
+  /* font-style: normal !important;
+  font-weight: normal !important; */
+  letter-spacing: 0px !important;
+  line-height: 1 !important;
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, ol, p, ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+
+/* Scrollbars */
+
+/* width */
+::-webkit-scrollbar {
+  width: 1ch;
+}

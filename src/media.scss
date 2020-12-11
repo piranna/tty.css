@@ -1,0 +1,60 @@
+@import 'color-schemes/mixins';
+
+@import "index.scss";
+
+
+// TTY grid
+
+@media tty, (grid: 1) {
+  @import "grid/index.scss";
+}
+
+
+// Color schemes
+
+/* Terminals configuration used dark theme by default, so we use it if there's
+ * no preference
+ */
+ @media (prefers-color-scheme: dark),
+ (prefers-color-scheme: no-preference) {
+  @import "color-schemes/dark.scss";
+
+  :root {
+    @include dark-root;
+  }
+
+  :root[data-grid='1'] input {
+    @include dark-input;
+  }
+
+  :root[data-prefers-color-scheme=light] input {
+    @include light-input;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  @import "color-schemes/light.scss";
+
+  :root {
+    @include light-root;
+  }
+
+  :root[data-grid='1'] input {
+    @include light-input;
+  }
+
+  :root[data-prefers-color-scheme=dark] input {
+    @include dark-input;
+  }
+}
+
+
+// Colors depth
+
+// @media (color: 0), (min-color: 0) {
+//   @include binary;
+// }
+
+// @media (color: 1), (min-color: 1) {
+//   @include rgb-3bits;
+// }
