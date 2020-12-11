@@ -4,7 +4,7 @@
   "description": "Pure CSS simulation of text-mode web browsers",
   "main": "index.css",
   "scripts": {
-    "build": "sass src/index.scss:index.css src/media.scss:media.css",
+    "build": "sass src/index.scss:index.css src/full.scss:full.css src/media.scss:media.css src/selector.scss:selector.css --style compressed",
     "prepare": "npm run build",
     "prestart": "npm run build",
     "start": "serve"
