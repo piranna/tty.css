@@ -85,3 +85,5 @@ GitHub Pages sites are powered by [Jekyll](https://jekyllrb.com/), where themes
 files are stacked. It was as simple as
 [placing an empty stylesheet file at `assets/css/style.scss`](https://help.github.com/en/github/working-with-github-pages/adding-a-theme-to-your-github-pages-site-using-jekyll#customizing-your-themes-css)
 importing the one of the project.
+
+<script src="index.js"></script>
