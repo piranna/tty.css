@@ -1,0 +1,15 @@
+input {
+  border-bottom: 1px inset;
+}
+
+input[type=date]::before {
+  content: 'date ';
+}
+
+input[type=time]::before {
+  content: 'time ';
+}
+
+input[type=search]::before {
+  content: 'search ';
+}

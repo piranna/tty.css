@@ -1,3 +1,6 @@
+@import "input";
+
+
 button, input {
   padding: 0px;
   background-color: inherit;
@@ -14,8 +17,4 @@ button::before {
 button::after {
   box-sizing: border-box;
   content: ']'
-}
-
-input {
-  border-bottom: 1px inset;
 }
